@@ -9,7 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="lg:w-[60%] mx-auto bg-[#171717]">
+      <body className="lg:w-[60%] mx-auto">
         <Toaster position="bottom-center"/>
         {children}
       </body>
