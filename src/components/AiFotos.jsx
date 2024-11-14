@@ -22,6 +22,33 @@ const AiFotos = () => {
           className="rounded-lg object-cover sm:w-[49%] w-[100%] h-auto"
           priority
         />
+        <Image
+          src={"/3.png"}
+          alt="Eli con vestido rojo en el pasillo de un avion"
+          width={0}
+          height={0}
+          sizes="100vw"
+          className="rounded-lg object-cover sm:w-[49%] w-[100%] h-auto"
+          priority
+        />
+        <Image
+          src={"/4.png"}
+          alt="Eli con vestido rojo en el pasillo de un avion"
+          width={0}
+          height={0}
+          sizes="100vw"
+          className="rounded-lg object-cover sm:w-[49%] w-[100%] h-auto"
+          priority
+        />
+        <Image
+          src={"/5.png"}
+          alt="Calleja sentado en una taberna con birra en mano y con falda y chaleco de santa"
+          width={0}
+          height={0}
+          sizes="100vw"
+          className="rounded-lg object-cover sm:w-[49%] w-[100%] h-auto"
+          priority
+        />
       </div>
     </div>
   );

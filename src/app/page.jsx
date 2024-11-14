@@ -183,7 +183,7 @@ export default function Home() {
         </div>}
         <div className="flex flex-col gap-5 items-center justify-center shadow-sm bg-[#473844] p-3 sm:p-5 rounded-md">
           <h2 className="text-2xl md:text-3xl font-semibold">
-            Lista de los números comprado
+            Lista de los números comprados
           </h2>
           <p className="font-semibold text-gray-300">
             En este apartado podrás ver la lista de los números que ya han sido
