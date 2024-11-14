@@ -84,7 +84,7 @@ const FotosPage = () => {
               {admin && (
                 <Image
                   src={"/remove.png"}
-                  alt=""
+                  alt="borrar imagen"
                   width={30}
                   height={300}
                   className="rounded-lg absolute right-2 top-2 bg-white cursor-pointer"
