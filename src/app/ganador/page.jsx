@@ -106,7 +106,7 @@ const GanadorPage = () => {
   }
 
   return (
-    <main className="flex items-center justify-center h-[100vh] mx-3">
+    <main className="flex items-center justify-center min-h-[100vh] m-3">
       {nombre.length ? (
         <div className="flex flex-col gap-5 items-center justify-center shadow-sm bg-[#473844] p-3 sm:p-5 rounded-md">
           <span className="sm:text-4xl text-red-600">

@@ -108,7 +108,7 @@ const EditarPage = () => {
   }
 
   return (
-    <main className="flex items-center flex-col justify-center h-[100vh] mx-3 gap-5">
+    <main className="flex items-center flex-col justify-center min-h-[100vh] mx-3 gap-5">
       <h3 className="text-2xl font-bold text-purple-600">Subir Imagen</h3>
       <label htmlFor="file">
         <Image
