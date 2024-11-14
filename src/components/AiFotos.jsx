@@ -32,8 +32,8 @@ const AiFotos = () => {
           priority
         />
         <Image
-          src={"/4.png"}
-          alt="Eli con vestido rojo en el pasillo de un avion"
+          src={"/6.png"}
+          alt="Javi sentado en una silla con pelo largo y unos cuernos de demonio y tatuajes en pecho, en escena con fuego"
           width={0}
           height={0}
           sizes="100vw"
@@ -41,7 +41,7 @@ const AiFotos = () => {
           priority
         />
         <Image
-          src={"/5.png"}
+          src={"/4.png"}
           alt="Calleja sentado en una taberna con birra en mano y con falda y chaleco de santa"
           width={0}
           height={0}
