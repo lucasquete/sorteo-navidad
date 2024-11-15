@@ -1,12 +1,11 @@
 "use client"
 
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
 import { useAdminContext } from '../app/providers'
 
 const Navbar = () => {
 
-  const {admin, setAdmin} = useAdminContext();
+  const {admin } = useAdminContext();
 
   return (
     <nav className='p-4 sm:p-6 text-center'>

@@ -17,6 +17,16 @@ export default function Home() {
   const [nombre, setNombre] = useState("");
   const [selected, setSelected] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [showComponent, setShowComponent] = useState(true);
+
+  useEffect(() => {
+    const targetDate = new Date('2024-12-21T24:00:00');
+    const currentTime = new Date();
+
+    if (currentTime >= targetDate) {
+      setShowComponent(false);
+    }
+  }, []);
 
   useEffect(() => {
     fetch("/api/numbers")
@@ -107,7 +117,7 @@ export default function Home() {
             números.
           </p>
         </div>}
-        {ganador.length ? null : <div className="flex flex-col gap-5 items-center justify-center shadow-sm bg-[#3b3b3b] p-3 sm:p-5 rounded-md">
+        {showComponent && <div className="flex flex-col gap-5 items-center justify-center shadow-sm bg-[#3b3b3b] p-3 sm:p-5 rounded-md">
           <h2 className="text-2xl md:text-3xl font-semibold">
             Lista de Números
           </h2>

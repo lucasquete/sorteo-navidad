@@ -158,7 +158,7 @@ const GanadorPage = () => {
                     ))}
                   </>
                 ) : (
-                  <div className="flex flex-col gap-8 min-h-[200px] items-center justify-center text-white">
+                  <div className="flex flex-col gap-8 min-h-[200px] items-center justify-center text-center text-white">
                     <h3 className="font-bold text-2xl text-red-400">
                     ¡No hay números seleccionados aún!
                     </h3>

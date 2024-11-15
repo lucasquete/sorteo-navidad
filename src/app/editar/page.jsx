@@ -29,11 +29,6 @@ const EditarPage = () => {
     }
   };
 
-  const removeSelectedImage = () => {
-    setSelectedImage();
-    setFile([]);
-  };
-
   const handleUploading = async () => {
     if (!file) return;
 
@@ -134,16 +129,8 @@ const EditarPage = () => {
             height={300}
             className="rounded-lg"
           />
-          <Image
-            src={"/remove.png"}
-            alt=""
-            width={30}
-            height={300}
-            className="rounded-lg absolute right-2 top-2 bg-white cursor-pointer"
-            onClick={removeSelectedImage}
-          />
         </div>
-      )}
+       )}
       <input
         type="text"
         placeholder="Titulo"
