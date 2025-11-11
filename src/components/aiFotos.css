@@ -1,0 +1,100 @@
+.main {
+    max-width: 100%;
+    display: flex;
+    padding: 8rem;
+    scroll-snap-type: x mandatory;
+    perspective: 100rem;
+    transform-style: preserve-3d;
+    overflow: auto;
+}
+
+.main::-webkit-scrollbar-thumb {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(195, 0, 255) 100%);
+    border-radius: 10px;
+}
+
+.main::-webkit-scrollbar {
+    height: 10px;
+}
+
+.slide {
+    list-style: none;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: auto set-z linear both;
+    animation-timeline: view(inline);
+    will-change: transform, z-index;
+    z-index: 0;
+}
+
+.image {
+    max-width: 17rem;
+    animation: auto rotate-cover linear both;
+    animation-timeline: view(inline);
+    scroll-snap-align: center;
+    transform-style: preserve-3d;
+    border-radius: 8px;
+    backface-visibility: hidden;
+}
+
+@keyframes rotate-cover {
+    0% {
+        transform: translateX(-125%) rotateY(-45deg) translateZ(-15rem) scale(0.75);
+        opacity: 0;
+    }
+    
+    35% {
+        transform: translateX(0) rotateY(-45deg) translateZ(-5rem);
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0);
+        opacity: 1;
+    }
+    
+    48% {
+        transform: translateX(0) scale(1.35) translateZ(0rem);
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.75);
+    }
+    50% {
+        transform: translateX(0) scale(1.35) translateZ(0rem);
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.75);
+    }
+    
+    52% {
+        transform: translateX(0) scale(1.35) translateZ(0rem);
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.75);
+    }
+    
+    65% {
+        transform: translateX(0) rotateY(45deg) translateZ(-5rem);
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0);
+        opacity: 1;
+    }
+    
+    100% {
+        transform: translateX(125%) rotateY(45deg) translateZ(-15rem) scale(0.75);
+        opacity: 0;
+    }
+
+}
+
+@keyframes set-z {
+    0% {
+        z-index: 0;
+    }
+    
+    35% {
+        z-index: 4;
+    }
+    
+    50% {
+        z-index: 10;
+    }
+    
+    65% {
+        z-index: 4;
+    }
+    
+    100% {
+        z-index: 0;
+    }
+}

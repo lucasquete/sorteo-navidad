@@ -20,7 +20,7 @@ export default function Home() {
   const [showComponent, setShowComponent] = useState(true);
 
   useEffect(() => {
-    const targetDate = new Date('2024-12-21T24:00:00');
+    const targetDate = new Date('2025-11-21T24:00:00');
     const currentTime = new Date();
 
     if (currentTime >= targetDate) {
@@ -38,6 +38,45 @@ export default function Home() {
         setIsLoading(false);
       });
   }, []);
+
+  // const handleSubmit = async () => {
+  //   if (!selected || nombre === "") {
+  //     toast.error("Debes seleccionar y escribir el nombre", {
+  //       duration: 4000,
+  //     });
+  //   } else {
+  //     const res = numbers.filter((n) => n.numero === selectNumber);
+  //     const response = await fetch("/api/numbers", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({
+  //         id: res[0].id,
+  //         numero: "4",
+  //         nombre: nombre,
+  //         selecionado: true,
+  //       }),
+  //     });
+
+  //     const json = await response.json();
+
+  //     if (json) {
+  //       fetch("/api/numbers")
+  //         .then((res) => res.json())
+  //         .then((data) => {
+  //           setNumbers(data.filter((d) => !d?.nombre));
+  //           setNombres(data.filter((d) => d?.nombre));
+  //         });
+  //       setNombre("");
+  //       setSelectNumber("");
+  //       setSelected(false);
+  //       toast.success("Número seleccionado correctamente", {
+  //         duration: 4000,
+  //       });
+  //     }
+  //   }
+  // };
 
   const handleSubmit = async () => {
     if (!selected || nombre === "") {
@@ -61,7 +100,11 @@ export default function Home() {
 
       const json = await response.json();
 
-      if (json) {
+      if(json.error) {
+        toast.error(json.error, {
+          duration: 4000,
+        });
+      } else {
         fetch("/api/numbers")
           .then((res) => res.json())
           .then((data) => {
@@ -100,7 +143,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col w-full gap-6">
         {ganador.length ? <Ganador ganador={ganador} /> : null}
-        {ganador.length ? null : <AiFotos />}
+        {/* {ganador.length ? null : <AiFotos />} */}
         {ganador.length ? null : <div className="flex gap-2 flex-col bg-red-600 font-semibold text-gray-300 rounded-md p-3">
           <p>
             <b className="text-black">¡Importante!</b> ⚠️
@@ -198,7 +241,7 @@ export default function Home() {
           <p className="font-semibold text-gray-300">
             En este apartado podrás ver la lista de los números que ya han sido
             comprados, con su correspondiente nombre/propietario. El plazo
-            límite para adquirir números termina el 21 de diciembre de 2024.⏳
+            límite para adquirir números termina el 21 de diciembre de 2025.⏳
             Para cualquier duda o consulta escríbenos al grupo de Wasap creado
             para este fin. ¡Estaremos encantad@s de atenderte!❤
           </p>
